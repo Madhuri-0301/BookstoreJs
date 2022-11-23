@@ -18,30 +18,28 @@ window.addEventListener("DOMContentLoaded", function () {
   //   }
   //   console.log("this is close");
   nxt.addEventListener("click", () => {
-    //
-  
-      let data = {
-        fullName: fName.value,
-        email: uName.value,
-        password: pswd.value,
-        phone:mNumber.value,
-      };
+    let data = {
+      fullName: fName.value,
+      email: uName.value,
+      password: pswd.value,
+      phone: mNumber.value,
+    };
 
-      console.log(data);
-      $.ajax({
-        url: "https://new-bookstore-backend.herokuapp.com/bookstore_user/admin/registration",
-        type: "POST",
-        data: data,
-        "Content-Type": "application/json",
-        // headers: {
-        //    'Authorization': 'Bearer <token>'
-        // },
-        success: function (result) {
-          console.log(result);
-        },
-        error: function (error) {
-          console.log(error);
-        },
-      });
+    console.log(data);
+    $.ajax({
+      url: "https://new-bookstore-backend.herokuapp.com/bookstore_user/admin/registration",
+      type: "POST",
+      data: data,
+      "Content-Type": "application/json",
+      // headers: {
+      //    'Authorization': 'Bearer <token>'
+      // },
+      success: function (result) {
+        console.log(result);
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
   });
 });
